@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Email Toolkit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Introduction -->
+    <section class="container intro">
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Sup.</h1>
+                <h2>Here's a toolkit you can use for the countless emails you have to code..</h2>
+                <p>Most browsers and email clients work well with modern HTML5 and CSS3 code but we have to take into account the people that still use old platforms like IE9 and older as well as older versions of outlook.</p>
+                <p>To play nicely on all platforms, we're going oldschool and using nested tables to lay out our emails.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="container section1">
+        
+        <div class="row">
+            <div class="col-xs-12">
+                <br />
+                <p>To start things off, here is a general layout and wrapper for all emails:</p><br />
+                <blockquote>
+                    <pre>                        
+<code>&lt;div style="background-color: #ffffff; height: 100%; margin-top: 0;
+         margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0;
+         padding-bottom: 0; padding-left: 0; width: 100%;"&gt;
+    &lt;!-- FULL WRAP --&gt;
+    &lt;table align="center" border="0" cellpadding="0" cellspacing="0"
+             style="height: 100%; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust:
+             none; -ms-text-size-adjust: none; width: 100%;"&gt;
+        &lt;tr&gt;
+            &lt;td align="center" bgcolor="#ffffff" valign="top"&gt;
+                ALL EMAIL CODE GOES IN HERE
+                Get ready to start nesting tables..
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/div&gt;</code>
+                    </pre>
+                </blockquote>
+                
+                <h3>Every email starts off with these.</h3>
+                <h3>Pre-header</h3>
+                <h5>First, you got the "pre-header". That code looks like this:</h5>
+                <blockquote>
+                    <pre>
+<code>&lt;table border="0" cellspacing="0" cellpadding="0" class="hide-mobile" width="587"&gt;
+    &lt;tr&gt;
+        &lt;td align="left" style="font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#4d4f53;padding-top:10px;padding-right:0;padding-bottom:10px;padding-left:0;"&gt;
+            Pre-header goes here
+        &lt;/td&gt;
+        &lt;td align="left" style="font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#4d4f53;padding-top:10px;padding-right:0;padding-bottom:10px;padding-left:0;"&gt;
+            View as a &lt;a href="##_onlineversion_##" style="color: #c60c30;"&gt;web page&ls;/a&gt;.
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code>
+                    </pre>
+                </blockquote>
+                <h3>Logo</h3>
+                <p>After that, Each email has either a "Brand" header which looks like this:</p>
+                <div class="centered-img-container">
+                    <img src="https://peiwei.fbmta.com/shared/images/21474836762/21474836762_20160818185816.jpg" alt="Brand" class="responsive-img">
+                </div>
+                <blockquote>
+                    <pre>
+<code>&lt;table align="center" border="0" cellpadding="0" cellspacing="0" class="width-hundred"&gt;
+    &lt;tr&gt;
+        &lt;td class="logo"&gt;
+            &lt;a href="http://www.peiwei.com/"&ls;/a&gt;.
+            &lt;img src="https://peiwei.fbmta.com/shared/images/21474836762/21474836762_20160818185816.jpg" alt="PEI WEI" width="600" height="85" border="0" class="img_width-hundred" style="display: block; font-family:Arial, Helvetica, sans-serif; color:#4d4f53; font-style:normal; font-weight:bold; font-size: 40px;" /&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code>
+                    </pre>
+                </blockquote>
+
+                <br />
+                <p>Or the "Loyalty" header which looks like this:</p>
+                <div class="centered-img-container">
+                    <img src="https://peiwei.fbmta.com/shared/images/21474836762/21474836762_20160930440209.jpg" alt="Loyalty" class="responsive-img">
+                </div>
+                <blockquote>
+                    <pre>
+<code>&lt;table align="center" border="0" cellpadding="0" cellspacing="0" class="width-hundred"&gt;
+    &lt;tr&gt;
+        &lt;td class="logo"&gt;
+            &lt;a href="http://www.peiwei.com/"&gt;
+                &lt;img src="https://peiwei.fbmta.com/shared/images/21474836762/21474836762_20160930440209.jpg" alt="PEI WEI" width="600" height="85" border="0" class="img_width-hundred" style="display: block; font-family:Arial, Helvetica, sans-serif; color:#4d4f53; font-style:normal; font-weight:bold; font-size: 40px;" /&gt;
+            &lt;/a&gt;
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code>
+                    </pre>
+                </blockquote>
+                <h3>Hero</h3>
+                <p>Next is the Hero Image which includes the desktop and mobile version in widths of 600px and 500px respectively.</p>
+                <blockquote>
+                    <pre>
+<code>&lt;!-- HERO IMAGE --&gt;
+&lt;table align="center" border="0" cellpadding="0" cellspacing="0" class="width-hundred"&gt;
+    &lt;tr&gt;
+        &lt;!-- DESKTOP VERSION (Hero Image) --&gt;
+        &lt;td class="hideOnMobile"&gt;
+            &lt;a href="" target="_blank"&gt;
+                &lt;img src="" alt="" class="hideOnMobile" style="display: block;" /&gt;
+            &lt;/a&gt;
+        &lt;/td&gt;
+
+        &lt;!-- MOBILE VERSION (Hero Image) --&gt;
+        &lt;!--[if !mso 9]&gt;&lt;!--&gt;
+        &lt;td class="hideOnDesktop"&gt;
+            &lt;a href="" target="_blank"&gt;
+                &lt;img src="" alt="" class="img_width-hundred" style="mso-hide:all;display:block;font-size:0;max-height:0;line-height:0;" /&gt;
+            &lt;/a&gt;
+        &lt;/td&gt;
+        &lt;!--[endif]--&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code>
+                    </pre>
+                </blockquote>
+            </div><!-- End of col-xs-12 -->   
+        </div><!-- End of row -->
+    </section><!-- End of section1 -->
+
+    <section class="container section2">
+        
+    </section>
+
+    <script src="components/jquery/dist/jquery.min.js"></script>
+    <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
